@@ -1,3 +1,11 @@
+"""
+Binary Arithmetic
+
+Performs binary arithmetic operations on two binary numbers entered
+by the user in the console.
+
+"""
+
 def displayDescription():
     """ Display the program description """
     print("-    ~~  ~~  ~~  ~~  ~~  ~~  ~~  ~~  ~~  ~~  ~~  ~~  ~~  ~~  ~~  ~~    -")
@@ -57,14 +65,12 @@ def stringToList(char_string):
             char_list.append(i)
     return char_list
 
-
 def listToString(char_list):
     """ Take a list of base2 integers and converts to string """
     char_string = ''
     for i in char_list:
         char_string = char_string + str(i)
     return char_string
-
 
 def equalizeLength(base2_int_list1, base2_int_list2):
     """ Add a zero to the number with fewest bits until equal in length """
@@ -76,7 +82,6 @@ def equalizeLength(base2_int_list1, base2_int_list2):
             base2_int_list1.insert(0, 0)
         else:
             equal_len = True
-
 
 def normalBinary(binary_list):
     """ Make list length divilsible by 4 by adding zeros to the front """
@@ -95,7 +100,6 @@ def normalBinary(binary_list):
             new_binary_list.append(' ')
     return new_binary_list
 
-
 def typeCheck(char_list, base):
     """ Check that the number is the proper base """
     if base == 2:
@@ -106,7 +110,6 @@ def typeCheck(char_list, base):
                 proper_type = False
                 break
     return proper_type
-
 
 def main():
     """ Main loop """
