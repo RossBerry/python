@@ -16,7 +16,7 @@ def chunks(obj: Union[list, str], size: int) -> Generator[Union[list, str], None
 
 
 def test(test_objects: list, size: int) -> None:
-    """ Test chunks function with list and string test objects. """
+    """ Test chunks function with list of test objects. """
     for test_object in test_objects:
         for chunk in chunks(test_object, size):
             print(chunk)
