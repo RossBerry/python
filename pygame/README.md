@@ -1,2 +1,2 @@
 # Pygame Projects
-- [**templates**](/templates) - Templates for Pygame projects.
+- [**templates**](/pygame/templates) - Templates for Pygame projects.
