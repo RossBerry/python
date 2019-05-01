@@ -1,66 +1,71 @@
 """
 basic_template.py
 
-Basic template for creating an empty display and simple game loop.
+Basic PyGame template for creating a simple game loop that displays a blank white screen.
 
 """
 __author__ = "Kenneth Berry"
+
 import pygame as pg
 
-# Display size (width, height)
-SIZE = (700, 500)
-# Window caption
-CAPTION = "My Game"
-# Define colors
-WHITE = (255, 255, 255)
+
+DISPLAY_SIZE = (700, 500)  # Display window size (width, height)
+CAPTION = "My Game"        # Display window caption
+
+# Constant Colors:
+WHITE = (255, 255, 255)    #(Red, Green, Blue)
 
 
 class Game:
     """
-    Basic game object.
+    Basic game loop object.
     """
 
     def __init__(self, size, caption):
-        pg.init()
-        self.size = size
         self.screen = pg.display.set_mode(size)
         pg.display.set_caption(caption)
-        self.done = False
-        self.clock = pg.time.Clock()
+        self.window_size = size
+        self.done = False  # Flag for exiting game loop
+        self.clock = pg.time.Clock()  # Clock to help controll frames per second
 
-    def __event_handler(self):
+    def event_handler(self):
         """
         Handle events.
         """
         for event in pg.event.get():
             if event.type == pg.QUIT:
                 self.done = True
+            #-- Add event handling code here --#
 
-    def __update(self):
+    def update(self):
         """
         Update game objects.
         """
-        pass
+        #-- Add game updates and logic here --#
 
-    def __render(self):
+    def render(self):
         """
         Render screen to display.
         """
-        self.screen.fill(WHITE)
-        pg.display.flip()
+        self.screen.fill(WHITE)  # Fill background before drawing scene
+        #-- Add rendering code here --#
+
+        #-----------------------------#
+        pg.display.flip()  # Draw the screen onto the display window
 
     def run(self):
         """
         Run main game loop.
         """
         while not self.done:
-            self.__event_handler()
-            self.__update()
-            self.__render()
+            self.event_handler()
+            self.update()
+            self.render()
             self.clock.tick(20)
-        pg.quit()
 
 
 if __name__ == "__main__":
-    game = Game(SIZE, CAPTION)
-    game.run()
+    pg.init()
+    GAME = Game(DISPLAY_SIZE, CAPTION)
+    GAME.run()
+    pg.quit()
