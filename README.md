@@ -1,5 +1,4 @@
-# Python Scripts
-- **ascii_art_text.py** - Generates an ASCII art display in the console from text input by user.
-- **binary_arithmetic.py** - Performs binary arithmetic with two binary numbers entered into the console.
-- **chunks.py** - Chunk generator that breaks a list or string into n-sized chunks.
-- **serial_monitor.py** - Displays incoming serial port traffic.
+# Python Projects
+- [**misc**](/misc) - Miscellaneous Python programs and scripts.
+- [**pygame**](/pygame) - Python programs made with the [Pygame](https://www.pygame.org/) module
+
